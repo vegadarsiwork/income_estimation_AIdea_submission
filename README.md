@@ -1,2 +1,2 @@
-# IncomeEstimation_AIdea_submission
-Team AIdea's submission to the Matrix Protocol Hackathon happening at LenDenClub!
+# IncomeEstimation - AIdea
+Welcome to our submission for the Income Estimation Hackathon. This repository contains the structure and setup files for our project.
