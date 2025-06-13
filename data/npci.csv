@@ -1,0 +1,191 @@
+﻿State,District,Usage
+Andaman & Nicobar Islands,SOUTH ANDAMAN,0.1
+Andaman & Nicobar Islands,NORTH AND MIDDLE ANDAMAN,0.02
+Andaman & Nicobar Islands,NICOBAR,0
+Andhra Pradesh,VISAKHAPATNAM,1.69
+Andhra Pradesh,CHITTOOR,1.62
+Andhra Pradesh,KRISHNA,1.37
+Andhra Pradesh,EAST GODAVARI,1.21
+Andhra Pradesh,GUNTUR,1.15
+Andhra Pradesh,Others,5.16
+Arunachal Pradesh,PAPUM PARE,0.11
+Arunachal Pradesh,LOHIT,0.03
+Arunachal Pradesh,LOWER SUBANSIRI,0.03
+Arunachal Pradesh,UPPER SUBANSIRI,0.02
+Arunachal Pradesh,EAST SIANG,0.02
+Arunachal Pradesh,Others,0.08
+Assam,KAMRUP,1.41
+Assam,NAGAON,0.5
+Assam,SONITPUR,0.4
+Assam,CACHAR,0.37
+Assam,DIBRUGARH,0.34
+Assam,Others,3.42
+Bihar,PATNA,1.79
+Bihar,MUZAFFARPUR,0.58
+Bihar,WEST CHAMPARAN,0.49
+Bihar,SARAN,0.48
+Bihar,VAISHALI,0.47
+Bihar,Others,7.35
+Chandigarh,CHANDIGARH,0.65
+Chandigarh,BASTANAR,0
+Chhattisgarh,RAIPUR,1.3
+Chhattisgarh,DURG,1
+Chhattisgarh,BILASPUR(CGH),0.51
+Chhattisgarh,KORBA,0.34
+Chhattisgarh,RAJNANDGAON,0.32
+Chhattisgarh,Others,1.96
+Dadra & Nagar Haveli,DADRA AND NAGAR HAVELI,0.27
+Daman & Diu,DAMAN,0.17
+Daman & Diu,DIU,0.01
+Delhi,SOUTH WEST DELHI,1.62
+Delhi,SOUTH DELHI,1.43
+Delhi,NORTH WEST DELHI,1.4
+Delhi,WEST DELHI,1.36
+Delhi,EAST DELHI,1.3
+Delhi,Others,1.78
+Goa,NORTH GOA,0.58
+Goa,SOUTH GOA,0.51
+Goa,PANAJI,0
+Goa,MOIRA,0
+Goa,PANJIM,0
+Gujarat,AHMEDABAD,2.74
+Gujarat,SURAT,2.69
+Gujarat,VADODARA,1.45
+Gujarat,RAJKOT,0.95
+Gujarat,VALSAD,0.69
+Gujarat,Others,6.87
+Haryana,GURGAON,1.81
+Haryana,FARIDABAD,1.13
+Haryana,AMBALA,0.4
+Haryana,SONIPAT,0.38
+Haryana,KARNAL,0.34
+Haryana,Others,3.02
+Himachal Pradesh,SOLAN,0.46
+Himachal Pradesh,KANGRA,0.39
+Himachal Pradesh,SHIMLA,0.24
+Himachal Pradesh,MANDI,0.16
+Himachal Pradesh,SIRMAUR,0.15
+Himachal Pradesh,Others,0.59
+Jammu & Kashmir,JAMMU,0.76
+Jammu & Kashmir,SRINAGAR,0.25
+Jammu & Kashmir,ANANTHNAG,0.17
+Jammu & Kashmir,UDHAMPUR,0.16
+Jammu & Kashmir,KATHUA,0.15
+Jammu & Kashmir,Others,0.71
+Jharkhand,RANCHI,0.91
+Jharkhand,EAST SINGHBHUM,0.72
+Jharkhand,DHANBAD,0.52
+Jharkhand,BOKARO,0.31
+Jharkhand,WEST SINGHBHUM,0.25
+Jharkhand,Others,1.78
+Karnataka,BANGALORE,7.12
+Karnataka,BELGAUM,1.56
+Karnataka,MYSORE,1.4
+Karnataka,BANGALORE RURAL,1.17
+Karnataka,DAKSHINA KANNADA,0.96
+Karnataka,Others,12.14
+Kerala,THIRUVANANTHAPURAM,2.54
+Kerala,ERNAKULAM,2.45
+Kerala,KOLLAM,2.17
+Kerala,MALAPPURAM,1.96
+Kerala,THRISSUR,1.81
+Kerala,Others,9.43
+Ladakh,LEH LADAKH,0.07
+Lakshadweep,LAKSHADWEEP,0.01
+Madhya Pradesh,INDORE,1.6
+Madhya Pradesh,BHOPAL,0.97
+Madhya Pradesh,GWALIOR,0.52
+Madhya Pradesh,JABALPUR,0.49
+Madhya Pradesh,DHAR,0.39
+Madhya Pradesh,Others,6.47
+Maharashtra,THANE,11.1
+Maharashtra,MUMBAI,6.75
+Maharashtra,PUNE,6.18
+Maharashtra,NAGPUR,2.14
+Maharashtra,NASHIK,1.57
+Maharashtra,Others,14.76
+Manipur,IMPHAL WEST,0.27
+Manipur,THOUBAL,0.09
+Manipur,IMPHAL EAST,0.07
+Manipur,CHURACHANDPUR,0.06
+Manipur,BISHNUPUR,0.06
+Manipur,Others,0.08
+Meghalaya,EAST KHASI HILLS,0.31
+Meghalaya,WEST GARO HILLS,0.11
+Meghalaya,JAINTIA HILLS,0.07
+Meghalaya,RI BHOI,0.04
+Meghalaya,WEST KHASI HILLS,0.04
+Meghalaya,Others,0.04
+Mizoram,AIZAWL,0.28
+Mizoram,LUNGLEI,0.05
+Mizoram,CHAMPHAI,0.04
+Mizoram,LAWNGTLAI,0.03
+Mizoram,KOLASIB,0.03
+Mizoram,Others,0.03
+Nagaland,DIMAPUR,0.17
+Nagaland,KOHIMA,0.1
+Nagaland,MON,0.02
+Nagaland,WOKHA,0.02
+Nagaland,MOKOKCHUNG,0.02
+Nagaland,Others,0.03
+Odisha,KHORDA,1.26
+Odisha,BALESWAR,0.82
+Odisha,CUTTACK,0.75
+Odisha,GANJAM,0.67
+Odisha,MAYURBHANJ,0.52
+Odisha,Others,5.34
+Pondicherry,PONDICHERRY,0.89
+Pondicherry,KARAIKAL,0.16
+Pondicherry,MAHE,0.01
+Punjab,LUDHIANA,1.59
+Punjab,AMRITSAR,0.93
+Punjab,JALANDHAR,0.84
+Punjab,GURDASPUR,0.7
+Punjab,RUPNAGAR,0.65
+Punjab,Others,3.81
+Rajasthan,JAIPUR,1.99
+Rajasthan,ALWAR,0.77
+Rajasthan,DAUSA,0.59
+Rajasthan,JODHPUR,0.56
+Rajasthan,UDAIPUR,0.41
+Rajasthan,Others,4.67
+Sikkim,EAST SIKKIM,0.19
+Sikkim,WEST SIKKIM,0.05
+Sikkim,SOUTH SIKKIM,0.04
+Sikkim,NORTH SIKKIM,0.01
+Tamil Nadu,COIMBATORE,5.12
+Tamil Nadu,KANCHIPURAM,4.64
+Tamil Nadu,TIRUVALLUR,3.66
+Tamil Nadu,CHENNAI,3.35
+Tamil Nadu,VELLORE,2.67
+Tamil Nadu,Others,31.63
+Telangana,HYDERABAD,3.71
+Telangana,RANGA REDDY,1.94
+Telangana,KARIM NAGAR,0.86
+Telangana,MEDAK,0.83
+Telangana,WARANGAL,0.62
+Telangana,Others,2.35
+Tripura,WEST TRIPURA,0.45
+Tripura,NORTH TRIPURA,0.14
+Tripura,SOUTH TRIPURA,0.1
+Tripura,DHALAI,0.04
+Uttar Pradesh,LUCKNOW,2.21
+Uttar Pradesh,GHAZIABAD,1.81
+Uttar Pradesh,GAUTAM BUDDHA NAGAR,1.77
+Uttar Pradesh,VARANASI,1.17
+Uttar Pradesh,ALLAHABAD,1.12
+Uttar Pradesh,Others,20.82
+Uttarakhand,DEHRADUN,1.07
+Uttarakhand,HARIDWAR,0.66
+Uttarakhand,UDHAM SINGH NAGAR,0.63
+Uttarakhand,NAINITAL,0.37
+Uttarakhand,ALMORA,0.16
+Uttarakhand,Others,0.6
+West Bengal,KOLKATA,2.93
+West Bengal,NORTH 24 PARGANAS,2.66
+West Bengal,BARDHAMAN,1.56
+West Bengal,SOUTH 24 PARGANAS,1.45
+West Bengal,HOWRAH,1.34
+West Bengal,Others,8.65
+Others*,Others,1.37
+Total,,320.41
