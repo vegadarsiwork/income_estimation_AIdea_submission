@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder
-from sklearn.ensemble import GradientBoostingRegressor, StackingRegressor
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 import joblib
@@ -57,6 +57,7 @@ def merge_datasets(testdata, census, npci, viirs):
         merged = merged.merge(viirs, on="district", how="left")
     return merged
 
+# Feature engineering
 def preprocess_financial_features(df):
     # Aggregate balance
     balance_columns = [col for col in df.columns if "balance" in col]
@@ -75,11 +76,11 @@ def preprocess_financial_features(df):
     df['total_credit_limit'] = df[credit_columns].sum(axis=1)
 
     # Credit ratios
-    if 'active_credit_limit_1' in df.columns:
-        df['active_to_total_ratio'] = df['active_credit_limit_1'] / (df['total_credit_limit'] + 1e-6)
+    if 'active_credit_limit' in df.columns:
+        df['active_to_total_ratio'] = df['active_credit_limit'] / (df['total_credit_limit'] + 1e-6)
 
-    if 'credit_limit_recent_1' in df.columns:
-        df['credit_new_to_old_ratio'] = df['credit_limit_recent_1'] / (df['max_credit_limit'] + 1e-6)
+    if 'credit_limit_recent' in df.columns:
+        df['credit_new_to_old_ratio'] = df['credit_limit_recent'] / (df['max_credit_limit'] + 1e-6)
 
     # Aggregate total EMI
     emi_columns = [col for col in df.columns if "emi" in col]
@@ -98,8 +99,8 @@ def preprocess_financial_features(df):
     df['total_repayment'] = df[repayment_columns].sum(axis=1)
 
     # Debt to repayment ratio
-    if 'total_loans_1' in df.columns:
-        df['debt_to_repayment_ratio'] = df['total_loans_1'] / (df['total_repayment'] + 1e-6)
+    if 'total_loans' in df.columns:
+        df['debt_to_repayment_ratio'] = df['total_loans'] / (df['total_repayment'] + 1e-6)
 
     # Aggregate total inquiries
     inquiries_columns = [col for col in df.columns if "inquiries" in col]
@@ -110,8 +111,8 @@ def preprocess_financial_features(df):
     df['total_total_inquiries'] = df[inquiries_columns].sum(axis=1)
 
     # Closed ratio
-    if 'closed_loan' in df.columns and 'total_loans_1' in df.columns:
-        df['closed_ratio'] = df['closed_loan'] / (df['total_loans_1'] + 1e-6)
+    if 'closed_loan' in df.columns and 'total_loans' in df.columns:
+        df['closed_ratio'] = df['closed_loan'] / (df['total_loans'] + 1e-6)
 
     # Business balance ratio
     if 'business_balance' in df.columns and 'total_balance' in df.columns:
@@ -138,7 +139,14 @@ def train_models(merged_data):
     joblib.dump(valid_columns, "model/feature_names.joblib")
 
     # Train income model
-    income_model = GradientBoostingRegressor()
+    income_model = GradientBoostingRegressor(
+        n_estimators=300,         # Increase number of trees
+        learning_rate=0.05,       # Lower learning rate for better generalization
+        max_depth=4,              # Limit tree depth
+        min_samples_split=10,     # Require more samples to split
+        min_samples_leaf=5,       # Require more samples in leaf nodes
+        random_state=42           # Ensure reproducibility
+    )
     X_train, X_test, y_train, y_test = train_test_split(X, merged_data['target_income'], test_size=0.2)
     income_model.fit(X_train, y_train)
     joblib.dump(income_model, "model/income_model.joblib")
