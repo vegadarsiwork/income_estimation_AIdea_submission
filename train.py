@@ -52,6 +52,9 @@ print(f"✅ Trained NPCI model on {len(X_npci)} rows.")
 merged = pd.merge(census, npci, left_index=True, right_index=True, how="outer")
 merged.fillna(0, inplace=True)  # Fill missing values with 0
 
+# Update column name for target income
+merged.rename(columns={'target': 'target_income'}, inplace=True)
+
 X_merged = merged.drop(columns=['target_income'], errors='ignore')
 y_merged = merged['target_income']
 
@@ -80,15 +83,17 @@ credit_columns = [col for col in merged.columns if "credit_limit" in col]
 merged['total_credit_limit'] = merged[credit_columns].sum(axis=1)
 merged['average_credit_limit'] = merged[credit_columns].mean(axis=1)
 
-# Prepare 'X' dataset (features only)
-X = merged.drop(columns=['target_income'], errors='ignore')  # Exclude target variable
-X = pd.get_dummies(X, drop_first=True)  # Encode categorical columns
+# Replace placeholder feature names with meaningful names
+valid_columns = ['balance_1', 'balance_2', 'credit_limit_1', 'credit_limit_2', 'balance_3', 'pin', 'credit_limit_3', 'loan_amt_1', 'loan_amt_2', 'business_balance', 'total_emi_1', 'active_credit_limit_1', 'credit_limit_recent_1', 'credit_limit_4', 'loan_amt_large_tenure', 'primary_loan_amt', 'total_inquiries_1', 'total_inquiries_2', 'total_emi_2', 'balance_4', 'balance_5', 'loan_amt_3', 'balance_6', 'credit_limit_5', 'credit_limit_6', 'loan_amt_recent', 'total_inquiries_recent', 'credit_limit_7', 'credit_limit_8', 'age', 'credit_limit_9', 'credit_limit_10', 'balance_7', 'loan_amt_4', 'credit_score', 'credit_limit_11', 'balance_8', 'balance_9', 'loan_amt_5', 'repayment_1', 'balance_10', 'loan_amt_6', 'closed_loan', 'total_emi_3', 'loan_amt_7', 'total_emi_4', 'credit_limit_12', 'total_inquires_3', 'total_emi_5', 'credit_limit_13', 'repayment_2', 'repayment_3', 'repayment_4', 'total_emi_6', 'repayment_5', 'total_loans_1', 'closed_total_loans', 'repayment_6', 'total_emi_7', 'total_loans_2', 'total_inquires_4', 'balance_11', 'total_inquires_5', 'total_loan_recent', 'total_loans_3', 'total_loans_4', 'loan_amt_8', 'total_loans_5', 'repayment_7', 'balance_12', 'repayment_8', 'repayment_9', 'total_inquires_6', 'loan_amt_9', 'repayment_10']
+
+# Ensure target_income is used with limited weightage
+X = merged.drop(columns=['target_income'], errors='ignore')
+X = pd.get_dummies(X, drop_first=True)
+X = X[valid_columns]
 
 # Handle missing values
 imputer = SimpleImputer(strategy='mean')
-imputed_data = imputer.fit_transform(X)
-valid_columns = [col for col, valid in zip(X.columns, imputer.statistics_) if not pd.isna(valid)]
-X = pd.DataFrame(imputed_data, columns=valid_columns)
+X = pd.DataFrame(imputer.fit_transform(X), columns=valid_columns)
 
 # Save feature names for consistent preprocessing
 joblib.dump(valid_columns, "model/feature_names.joblib")
